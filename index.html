@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Impact & Dinner | Fine Dining</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <a href="#" class="logo">
+            Impact <span>&</span> Dinner
+        </a>
+
+        <ul class="menu">
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-btn">
+            <a href="tel:+880170000000" class="call-btn">
+                Call Us
+            </a>
+
+            <a href="#contact" class="book-btn">
+                Book Table
+            </a>
+        </div>
+
+        <button class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </button>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="about">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                ✦ EST. 2026 · DHAKA
+            </p>
+
+            <h1>
+                Where Every
+                <span>Bite</span> Tells
+                a Story.
+            </h1>
+
+            <p class="hero-text">
+                A warm and elegant dining experience inspired by
+                fire, flavor and unforgettable moments.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#menu" class="primary-btn">
+                    Explore Menu
+                    <span>→</span>
+                </a>
+
+                <a href="#contact" class="secondary-btn">
+                    Reserve a Table
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-badge">
+            <span>★★★★★</span>
+            <p>Guest Favorite</p>
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOD SECTION ================= -->
+
+    <section class="food-section" id="menu">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="small">
+                    WHAT WE SERVE
+                </p>
+
+                <h2>
+                    Our Signature
+                    <span>Dishes</span>
+                </h2>
+            </div>
+
+            <p class="heading-description">
+                Carefully crafted dishes made with premium
+                ingredients and a little bit of fire.
+            </p>
+
+        </div>
+
+
+        <!-- FILTER BUTTONS -->
+
+        <div class="filter-buttons">
+
+            <button class="filter active" onclick="filterFood('all', this)">
+                All
+            </button>
+
+            <button class="filter" onclick="filterFood('main', this)">
+                Mains
+            </button>
+
+            <button class="filter" onclick="filterFood('starter', this)">
+                Starters
+            </button>
+
+            <button class="filter" onclick="filterFood('dessert', this)">
+                Dessert
+            </button>
+
+        </div>
+
+
+        <!-- FOOD CARDS -->
+
+        <div class="food-grid">
+
+            <!-- CARD 1 -->
+
+            <article class="food-card" data-category="main">
+
+                <div class="food-image lamb">
+
+                    <div class="image-overlay">
+                        <span>CHEF'S SPECIAL</span>
+                    </div>
+
+                    <div class="food-emoji">
+                        🥩
+                    </div>
+
+                </div>
+
+                <div class="food-content">
+
+                    <div class="food-meta">
+                        <span>Signature</span>
+                        <span>•</span>
+                        <span>Main</span>
+                    </div>
+
+                    <h3>
+                        Impact Dinner-Roasted Lamb Rack
+                    </h3>
+
+                    <p>
+                        Slow-roasted over applewood, served with
+                        pomegranate jus and seasonal vegetables.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ৳9,999
+                        </strong>
+
+                        <button
+                            class="add-btn"
+                            onclick="LambRackBtn()">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 2 -->
+
+            <article class="food-card" data-category="main">
+
+                <div class="food-image fish">
+
+                    <div class="image-overlay">
+                        <span>CHEF PICK</span>
+                    </div>
+
+                    <div class="food-emoji">
+                        🐟
+                    </div>
+
+                </div>
+
+                <div class="food-content">
+
+                    <div class="food-meta">
+                        <span>Chef Pick</span>
+                        <span>•</span>
+                        <span>Seafood</span>
+                    </div>
+
+                    <h3>
+                        Charred Sea Bass
+                    </h3>
+
+                    <p>
+                        Fire-charred sea bass with lemon butter,
+                        herbs and a delicate seasonal salad.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ৳1,950
+                        </strong>
+
+                        <button
+                            class="add-btn"
+                            onclick="SeafoodBtn()">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 3 -->
+
+            <article class="food-card" data-category="starter">
+
+                <div class="food-image mushroom">
+
+                    <div class="image-overlay">
+                        <span>VEGETARIAN</span>
+                    </div>
+
+                    <div class="food-emoji">
+                        🍄
+                    </div>
+
+                </div>
+
+                <div class="food-content">
+
+                    <div class="food-meta">
+                        <span>Vegetarian</span>
+                        <span>•</span>
+                        <span>Starter</span>
+                    </div>
+
+                    <h3>
+                        Wild Mushroom Tart
+                    </h3>
+
+                    <p>
+                        Wild mushrooms, caramelized onions and
+                        creamy herbs baked inside a golden tart.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ৳980
+                        </strong>
+
+                        <button
+                            class="add-btn"
+                            onclick="VegStarterBtn()">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 4 -->
+
+            <article class="food-card" data-category="dessert">
+
+                <div class="food-image dessert">
+
+                    <div class="image-overlay">
+                        <span>SWEET ENDING</span>
+                    </div>
+
+                    <div class="food-emoji">
+                        🍰
+                    </div>
+
+                </div>
+
+                <div class="food-content">
+
+                    <div class="food-meta">
+                        <span>Signature</span>
+                        <span>•</span>
+                        <span>Dessert</span>
+                    </div>
+
+                    <h3>
+                        Burnt Caramel Cheesecake
+                    </h3>
+
+                    <p>
+                        Creamy cheesecake with burnt caramel,
+                        vanilla cream and a crisp biscuit base.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ৳850
+                        </strong>
+
+                        <button
+                            class="add-btn"
+                            onclick="DessertBtn()">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EXPERIENCE ================= -->
+
+    <section class="experience">
+
+        <div class="experience-content">
+
+            <p class="small">
+                THE IMPACT EXPERIENCE
+            </p>
+
+            <h2>
+                Good Food.
+                <span>Good People.</span>
+                Great Memories.
+            </h2>
+
+            <p>
+                From the first warm welcome to the final bite,
+                every detail is designed to make your evening
+                feel special.
+            </p>
+
+            <div class="experience-stats">
+
+                <div>
+                    <strong>12+</strong>
+                    <span>Signature Dishes</span>
+                </div>
+
+                <div>
+                    <strong>4.9</strong>
+                    <span>Guest Rating</span>
+                </div>
+
+                <div>
+                    <strong>2026</strong>
+                    <span>Established</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="experience-card">
+
+            <div class="quote">
+                “
+            </div>
+
+            <p>
+                We don't just serve dinner.
+                We create moments worth remembering.
+            </p>
+
+            <span>
+                — Impact & Dinner
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= REVIEW SECTION ================= -->
+
+    <section class="review" id="reviews">
+
+        <div class="review-top">
+
+            <p class="small">
+                WHAT GUESTS SAY
+            </p>
+
+            <h2>
+                Words That Warm
+                Our <span>Hearts</span>
+            </h2>
+
+            <p>
+                A few words from people who shared
+                their table with us.
+            </p>
+
+        </div>
+
+
+        <div class="review-grid">
+
+            <!-- REVIEW 1 -->
+
+            <article class="review-card">
+
+                <div class="review-header">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <span>
+                        5.0
+                    </span>
+
+                </div>
+
+                <p class="review-text">
+                    “Great, go ahead! Your design is looking
+                    really clean. Keep improving.”
+                </p>
+
+                <div class="person">
+
+                    <div class="circle">
+                        TS
+                    </div>
+
+                    <div>
+                        <h4>
+                            Tanvir Sir
+                        </h4>
+
+                        <p>
+                            Instructor
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- REVIEW 2 -->
+
+            <article class="review-card featured-review">
+
+                <div class="review-header">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <span>
+                        5.0
+                    </span>
+
+                </div>
+
+                <p class="review-text">
+                    “Our anniversary dinner here was perfect
+                    in every way. The atmosphere was beautiful.”
+                </p>
+
+                <div class="person">
+
+                    <div class="circle">
+                        SU
+                    </div>
+
+                    <div>
+                        <h4>
+                            Soniya Ummey
+                        </h4>
+
+                        <p>
+                            Guest
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- REVIEW 3 -->
+
+            <article class="review-card">
+
+                <div class="review-header">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <span>
+                        5.0
+                    </span>
+
+                </div>
+
+                <p class="review-text">
+                    “The service was very good, bro!
+                    Pranta, I will give you a treat here.”
+                </p>
+
+                <div class="person">
+
+                    <div class="circle">
+                        ARJ
+                    </div>
+
+                    <div>
+                        <h4>
+                            ARJ
+                        </h4>
+
+                        <p>
+                            Guest
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="reservation" id="contact">
+
+        <div>
+
+            <p class="small">
+                MAKE IT A NIGHT TO REMEMBER
+            </p>
+
+            <h2>
+                Your Table
+                <span>Awaits.</span>
+            </h2>
+
+            <p>
+                Join us for an evening of great food,
+                warm hospitality and unforgettable memories.
+            </p>
+
+        </div>
+
+        <a href="tel:+880170000000" class="primary-btn">
+            Book Your Table
+            <span>→</span>
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-box">
+
+            <div class="footer-brand">
+
+                <h2>
+                    Impact <span>&</span> Dinner
+                </h2>
+
+                <p>
+                    A dining experience rooted in warmth,
+                    fire cooking and unforgettable moments.
+                </p>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        f
+                    </a>
+
+                    <a href="#">
+                        ig
+                    </a>
+
+                    <a href="#">
+                        in
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <a href="#menu">
+                    Menu
+                </a>
+
+                <a href="#reviews">
+                    Reviews
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Visit
+                </h3>
+
+                <a href="#">
+                    Events
+                </a>
+
+                <a href="#">
+                    Gift Cards
+                </a>
+
+                <a href="#">
+                    Private Dining
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <a href="tel:+880170000000">
+                    +880 1700 000000
+                </a>
+
+                <a href="#">
+                    Dhaka, Bangladesh
+                </a>
+
+                <a href="#contact">
+                    Book Table
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Impact & Dinner. All rights reserved.
+            </p>
+
+            <div>
+                <a href="#">
+                    Privacy
+                </a>
+
+                <a href="#">
+                    Terms
+                </a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
